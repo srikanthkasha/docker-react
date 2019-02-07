@@ -4,7 +4,7 @@ services:
 
 before_install:
   - docker build -t srikanthkasha/docker-react -f Dockerfile.dev .
-
+  - gem install bundler
 script:
   - docker run srikanthkasha/docker-react npm run test -- --coverage
 
